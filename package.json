@@ -1,0 +1,25 @@
+{
+  "name": "wheel",
+  "version": "0.0.1",
+  "description": "vue ui admin ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxyloco/wheel.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "wo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sxyloco/wheel/issues"
+  },
+  "homepage": "https://github.com/sxyloco/wheel#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
