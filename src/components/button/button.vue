@@ -1,7 +1,7 @@
 <template>
     <button :disabled="disabled" class="g-button" :class="{[`icon-${iconPosition}`]:true,size:true}" @click="$emit('click')">
         <GIcon v-if="icon && !loading" :name="icon" class="icon"></GIcon>
-        <GIcon v-if="loading" :name="icon" class="icon loading"></GIcon>
+        <GIcon v-if="loading" :name="'g-loading'" class="icon loading"></GIcon>
         <div class="content">
             <!-- slot 不能单独加上class -->
             <slot></slot>

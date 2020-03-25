@@ -29,6 +29,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-regenerator-runtime": "^6.5.0",
+    "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
@@ -58,14 +59,12 @@
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
-  
   "bugs": {
     "url": "https://github.com/sxyloco/wheel/issues"
   },
   "homepage": "https://github.com/sxyloco/wheel#readme",
   "dependencies": {
     "autoprefixer": "^9.7.4",
-    "chai": "^4.2.0",
     "karma-webpack": "^4.0.2",
     "node-sass": "^4.13.1",
     "postcss-loader": "^3.0.0",
@@ -80,5 +79,4 @@
     "> 1%",
     "last 2 versions"
   ]
-  
 }

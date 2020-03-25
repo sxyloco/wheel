@@ -13,3 +13,81 @@ new Vue({
         return h(app)
     }
 })
+
+
+// 单元测试
+import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
+const expect = chai.expect
+
+{
+    const Constructor = Vue.extend(Gbutton)
+    const vm = new Constructor({
+        propsData:{
+            icon:'setting'
+        }
+    })
+    vm.$mount()
+    let useElment = vm.$el.querySelector('use')
+    let href = useElment.getAttribute('xlink:href')
+    expect(href).to.eq('#iconsetting')
+    vm.$el.remove()
+    vm.$destroy()
+}
+{
+    const Constructor = Vue.extend(Gbutton)
+    const vm = new Constructor({
+        propsData:{
+            icon:'setting',
+            loading:true
+        }
+    })
+    vm.$mount()
+    let useElment = vm.$el.querySelector('use')
+    let href = useElment.getAttribute('xlink:href')
+    expect(href).to.eq('#icong-loading')
+    vm.$el.remove()
+    vm.$destroy()
+}
+
+{
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Gbutton)
+    const vm = new Constructor({
+        propsData:{
+            icon:'g-setting',
+            loading:false,
+            iconPosition:'right'
+        }
+    })
+    vm.$mount(div)
+    let svg = vm.$el.querySelector('svg')
+    let {order} = window.getComputedStyle(svg)
+    expect(order).to.eq('2')
+    vm.$el.remove()
+    vm.$destroy()
+}
+
+{
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Gbutton)
+    const vm = new Constructor({
+        propsData:{
+            icon:'g-setting',
+            loading:false,
+            iconPosition:'right'
+        }
+    })
+    vm.$mount(div)
+    let spy = chai.spy(function(){})
+    vm.$on('click',spy)// 绑定事件
+    let button = vm.$el
+    button.click()// 执行事件
+    expect(spy).to.have.been.called()
+    // vm.$el.remove()
+    // vm.$destroy()
+}
+
