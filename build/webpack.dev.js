@@ -6,7 +6,7 @@ module.exports = merge(baseConfig, {
     mode: 'development',
     devtool: 'inline-source-map',
     entry: {
-        index: path.resolve(__dirname, '../src/example.js')
+        index: path.resolve(__dirname, '../src/index.js')
     },
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),

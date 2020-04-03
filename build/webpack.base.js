@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV === 'development'; // 是否是开发模式
 module.exports = {
     entry: {
-        index: path.resolve(__dirname, '../src/example.js')
+        index: path.resolve(__dirname, '../src/index.js')
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
