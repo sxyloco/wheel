@@ -6,11 +6,10 @@ module.exports = merge(baseConfig, {
     mode: 'development',
     devtool: 'inline-source-map',
     entry: {
-        index: path.resolve(__dirname, '../src/index.js')
+        index: path.resolve(__dirname, '../doc/main.js')
     },
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
-        port:8000,
         open: true
     },
     module: {
@@ -18,7 +17,7 @@ module.exports = merge(baseConfig, {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../index.html')
+            template: path.resolve(__dirname, '../doc/index.html')
         }),
     ]
 });

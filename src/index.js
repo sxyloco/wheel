@@ -1,30 +1,32 @@
-import Vue from 'vue'
-import app from './app.vue'
-import './style/index.scss'
+
 import Gbutton from './components/button/button'
 import Gicon from './components/icons/icon.vue'
 import GbuttonGroup from './components/button/g-button-group.vue'
+import GInput from './components/input/input.vue'
 
-Vue.component('g-button',Gbutton)
-Vue.component('g-icon',Gicon)
-Vue.component('g-button-group',GbuttonGroup)
 const install = (Vue)=>{
     Vue.component('g-button',Gbutton)
     Vue.component('g-icon',Gicon)
     Vue.component('g-button-group',GbuttonGroup)
+    Vue.component('g-input',GInput)
 }
-new Vue({
-    el:'#app',
-    render:(h)=>{
-        return h(app)
-    }
-})
+
+// Vue.component('g-button',Gbutton)
+// Vue.component('g-icon',Gicon)
+// Vue.component('g-button-group',GbuttonGroup)
+// Vue.component('g-input',GInput)
+// new Vue({
+//     el:'#app',
+//     render:(h)=>{
+//         return h(app)
+//     }
+// })
 
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 export default {
-    install,Gbutton,Gicon,GbuttonGroup
+    Gbutton,Gicon,GbuttonGroup,GInput,install
 }
 
 // 单元测试
@@ -32,6 +34,7 @@ export default {
 // import spies from 'chai-spies'
 // chai.use(spies)
 // const expect = chai.expect
+
 
 // {
 //     const Constructor = Vue.extend(Gbutton)
