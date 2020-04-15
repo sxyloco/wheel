@@ -20,6 +20,10 @@ export default {
           title: "入门",
           name:'guide'
         },
+        {
+          title: "栅格",
+          name:'grid'
+        }
       ]
     };
   },

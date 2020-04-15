@@ -3,12 +3,16 @@ import Gbutton from './components/button/button'
 import Gicon from './components/icons/icon.vue'
 import GbuttonGroup from './components/button/g-button-group.vue'
 import GInput from './components/input/input.vue'
-
+import GCol from './components/grid/col.vue'
+import GRow from './components/grid/row.vue'
+import './style/index.scss'
 const install = (Vue)=>{
     Vue.component('g-button',Gbutton)
     Vue.component('g-icon',Gicon)
     Vue.component('g-button-group',GbuttonGroup)
     Vue.component('g-input',GInput)
+    Vue.component('g-row',GRow)
+    Vue.component('g-col',GCol)
 }
 
 // Vue.component('g-button',Gbutton)
@@ -26,7 +30,7 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 export default {
-    Gbutton,Gicon,GbuttonGroup,GInput,install
+    Gbutton,Gicon,GbuttonGroup,GInput,GCol,GRow,install
 }
 
 // 单元测试

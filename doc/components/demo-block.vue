@@ -17,7 +17,7 @@
         @mouseenter="isEnter=true"
         @mouseleave="isEnter = false"
       >
-        <e-icon :name="iconName" />
+        <g-icon :name="iconName" />
         <transition name="enterRight">
           <a v-if="isEnter" @click="showCodeFn">{{btnText}}</a>
         </transition>
